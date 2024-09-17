@@ -1,4 +1,4 @@
-import { createClient } from "@vercel/postgres";
+import { createClient } from '@vercel/postgres';
 
 export async function connectToDB() {
   const client = createClient();
@@ -6,10 +6,10 @@ export async function connectToDB() {
 
   try {
     if (client) {
-      console.log("Connected to database");
+      console.log('Connected to database');
       return client;
     }
   } catch (error) {
-    console.error("Error connecting to database", error);
+    console.error('Error connecting to database', error);
   }
 }
